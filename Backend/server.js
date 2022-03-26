@@ -7,7 +7,7 @@ let bodyParser = require("body-parser");
 
 // Schemaa 
 const Patients = require("./Schemas/Patient");
-const Docters = require("./Schemas/Docter");
+const doctors = require("./Schemas/doctor");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,16 +31,16 @@ app.post("/registerPatient", (req, res) => {
     }
   });
 });
-// Docter Register
-app.post("/registerDocter", (req, res) => {
-  let Docter = new Docters({
-    Name: req.body.DocterName,
-    Gender: req.body.DocterGender,
-    Email: req.body.DocterEmail,
-    PhoneNumber: req.body.DocterNumber,
-    Password: req.body.Docterpassword,
+// doctor Register
+app.post("/registerdoctor", (req, res) => {
+  let doctor = new doctors({
+    Name: req.body.doctorName,
+    Gender: req.body.doctorGender,
+    Email: req.body.doctorEmail,
+    PhoneNumber: req.body.doctorNumber,
+    Password: req.body.doctorpassword,
   });
-  Docter.save().then((e, r) => {
+  doctor.save().then((e, r) => {
     if (e) {
       console.log(e);
     } else {
@@ -58,7 +58,7 @@ app.post("/updatePatient", async (req, res) => {
   const update = { MedicalHistory: {
     Name: "TB2",
     Status: "Recorved",
-    PreviousDocter: "BVH",
+    Previousdoctor: "BVH",
   } };
   let doc = await Patients.findOneAndUpdate(filter, update, {
     returnOriginal: false

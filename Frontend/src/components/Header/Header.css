@@ -1,0 +1,20 @@
+.header {
+  background-color: #434748;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 97%;
+}
+.header__logo {
+  font-size: 16px;
+}
+.MuiButton-text {
+  color: white !important;
+  border: 2px solid white !important;
+  border-radius: 10px !important;
+}

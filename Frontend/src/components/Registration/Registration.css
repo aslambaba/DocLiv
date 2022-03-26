@@ -1,0 +1,22 @@
+.MainLoginBox{
+    margin-top: 10px;
+}
+input{
+    display: inherit;
+    padding: 10px 5px;
+    margin: 5px 0px;    
+    width: 80%;
+    border-radius: '5px';
+}
+.SelectField{
+    display: inherit;
+    padding: 10px 5px;
+    margin: 5px 0px;    
+    width: 84%;
+}
+button{
+    margin: 5px 0px;
+    padding: 10px 25px;
+    background-color: #434748;
+    color: white;
+}

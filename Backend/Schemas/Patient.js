@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const MedicalHistoryObj = {
   Name: String,
   Status: String,
-  PreviousDocter: String,
+  Previousdoctor: String,
 };
 
 const Patients = new Schema({

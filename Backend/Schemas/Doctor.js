@@ -1,34 +1,34 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const DocterDegressObj = {
+const doctorDegressObj = {
   DegreeName: String,
   PaasingYear: String,
   Institute: String,
 };
-const DocterExperienceObj = {
+const doctorExperienceObj = {
     JobPostionName: String,
     WorksIn: String,
     JobStatus: String,
     WorkingYears: String,
 }
 
-const Docters = new Schema({
+const doctors = new Schema({
   Name: { type: String, required: true },
   Gender: { type: String, required: true },
   Email: { type: String, required: true },
   PhoneNumber: { type: String, required: true },
   Password: { type: String, required: true },
-  DocterDegrees: {
-    type: [DocterDegressObj],
+  doctorDegrees: {
+    type: [doctorDegressObj],
     required: false,
   },
-  DocterExperience: {
-      type: [DocterExperienceObj],
+  doctorExperience: {
+      type: [doctorExperienceObj],
       required: false,
   }
 });
 
-const DoctersModel = mongoose.model("Docters", Docters);
+const doctorsModel = mongoose.model("doctors", doctors);
 
-module.exports = DoctersModel;
+module.exports = doctorsModel;
